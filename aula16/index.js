@@ -15,7 +15,7 @@ console.log(alunos instanceof Array);
 // delete alunos[1]; // [1] agora fica undefined
 // console.log(alunos[1]);
 
-// const removido = alunos.shift();
+// const removido = alunos.shift(); //remove do começo
 // console.log(removido);
 // console.log(alunos);
 
@@ -30,7 +30,7 @@ console.log(alunos instanceof Array);
 // alunos[alunos.length] = 'Fábio';
 // alunos[alunos.length] = 'Luana';
 
-// alunos[0] = 'Eduardo'; // Altera
+// alunos[0] = 'Eduardo'; // Alterar elemento
 // alunos[3] = 'Luiza'; // Adicionando
 
 // console.log(alunos);
