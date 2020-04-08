@@ -7,13 +7,13 @@ function criaCalculadora() {
             this.pressionaEnter();
         },
 
-        pressionaEnter(){
-            this.display.addEventListener('keyup', (e) => {
-                if (e.keyCode === 13) {
-                    this.realizaConta();
-                }
+        pressionaEnter() {
+            this.display.addEventListener('keyup', e => {
+              if (e.keyCode === 13) {
+                this.realizaConta();
+              }
             });
-        },
+          },
 
         clearDisplay(){
             this.display.value = '';
