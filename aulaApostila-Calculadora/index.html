@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>>Calculadora de empréstimos JavaScript</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+  <!--
+ Esta é uma tabela HTML com elementos <input> que permitem ao usuário inserir dados e
+elementos <span> nos quais o programa pode exibir seus resultados. Esses elementos têm
+identificações como "interest" e "years". Essas identificações são usadas no código
+JavaScript que vem após a tabela. Note que alguns dos elementos de entrada definem
+rotinas de tratamento de evento "onchange" ou "onclick". Elas especificam strings de
+código JavaScript a ser executado quando o usuário insere dados ou dá um clique.
+-->
+
+  <table>
+    <tr>
+      <th>Inserir dados do empréstimo</th>
+      <td></td>
+      <th>Saldo de empréstimo, patrimônio líquido acumulado e pagamentos de juros</th>
+    </tr>
+    <tr>
+      <td>Montante do empréstimo (R$):</td>
+      <td><input id="montante" onchange="calculate();"></td>
+      <td rowspan=8>
+        <canvas id="graph" width="400" height="250"></canvas></td>
+    </tr>
+    <tr>
+      <td>Juros anual (%):</td>
+      <td><input id="juros-anual" onchange="calculate();"></td>
+    </tr>
+    <tr>
+      <td>Período de reembolso (anos):</td>
+      <td><input id="anos" onchange="calculate();"></td>
+    <tr>
+      <td>CEP (para encontrar credores):</td>
+      <td><input id="cep" onchange="calculate();"></td>
+    <tr>
+      <th>Pagamentos aproximados:</th>
+      <td><button onclick="calculate();">Calculate</button></td>
+    </tr>
+    <tr>
+      <td>Pagamento mensal:</td>
+      <td>$<span class="output" id="pagamento-mensal"></span></td>
+    </tr>
+    <tr>
+      <td>Pagamento total:</td>
+      <td>$<span class="output" id="total"></span></td>
+    </tr>
+    <tr>
+      <td>Juros totais:</td>
+      <td>$<span class="output" id="juros-totais"></span></td>
+    </tr>
+    <tr>
+      <th>Patrocinadores:</th>
+      <td colspan=2>
+        Solicite seu empréstimo com um desses credores:
+        <div id="lenders"></div>
+      </td>
+    </tr>
+  </table>
+
+  <!-- O restante deste exemplo é código JavaScript na marca <script> a seguir -->
+  <!-- Normalmente, este script ficaria na marca <head> do documento acima, mas -->
+  <!-- é mais fácil entendê-lo aqui, depois de ter visto seu contexto HTML. -->
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
