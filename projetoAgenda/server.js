@@ -8,7 +8,13 @@ const app = express();
 // mongoose modela a base de dados e garante que os dados estejam da forma correta.
 // substitui o drive oficial do mongoDB
 const mongoose = require('mongoose')
-mongoose.connect(process.env.CONNECTIONSTRING, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.CONNECTIONSTRING,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false
+
+  })
   .then(() => {
     app.emit('pronto')
   }).catch(e => console.log(e))
@@ -37,7 +43,7 @@ const helmet = require('helmet');
 const csrf = require('csurf');
 
 // middlewares são funções que são executadas na rota. 
-const { middleWareGlobal, checkCsrfError, csrfMiddleware} = require('./src/middlewares/middleware')
+const { middleWareGlobal, checkCsrfError, csrfMiddleware } = require('./src/middlewares/middleware')
 
 
 app.use(helmet());
