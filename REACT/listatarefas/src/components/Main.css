@@ -12,33 +12,6 @@
   text-align: center;
 }
 
-.form {
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.form input[type="text"] {
-  height: 40px;
-  padding: 0 20px;
-  font-size: 20px;
-  border: 1px solid #ccc;
-  min-width: 80%;
-  border-radius: 3px;
-}
-
-.form button[type="submit"] {
-  background-color: rgb(164, 212, 124);
-  border: none;
-  height: 40px;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 3px;
-}
-
 .tarefas {
   margin-top: 30px;
 }
