@@ -1,3 +1,8 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+import './src/database'; // auto executa o arquivo index
 import express from 'express';
 import homeRoutes from './src/routes/homeRoutes';
 
