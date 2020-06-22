@@ -12,22 +12,6 @@
   text-align: center;
 }
 
-.tarefas {
-  margin-top: 30px;
-}
-
-.tarefas li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px;
-  border-radius: 2px;
-}
-
-.tarefas li:hover {
-  background: rgb(201, 201, 201);
-}
-
 .edit {
   color: rgb(0, 140, 255);
   margin-right: 5px;

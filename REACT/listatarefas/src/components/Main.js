@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import Form from './Form';
+import Tarefas from './Tarefas';
+
 import './Main.css';
 
-// Tarefas
-import { FaEdit, FaWindowClose } from 'react-icons/fa';
 
 export default class Main extends Component {
-
   state = {
     novaTarefa: '',
     tarefas: [],
@@ -91,17 +90,11 @@ export default class Main extends Component {
           novaTarefa={novaTarefa}
         />
 
-        <ul className="tarefas">
-          {tarefas.map((tarefa, index) => (
-            <li key={tarefa}>
-              {tarefa}
-              <span>
-                <FaEdit onClick={(e) => this.handleEdit(e, index)} className="edit" />
-                <FaWindowClose onClick={(e) => this.handleDelete(e, index)} className="delete" />
-              </span>
-            </li>
-          ))}
-        </ul>
+        <Tarefas
+          tarefas={tarefas}
+          handleEdit={this.handleEdit}
+          handleDelete={this.handleDelete}
+        />
 
       </div>
     );
