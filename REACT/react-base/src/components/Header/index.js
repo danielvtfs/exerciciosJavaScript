@@ -12,7 +12,7 @@ export default function Header() {
         <FaHome size={24} />
       </Link>
       <Link to="/login">
-        <FaUserAlt size={21} />
+        <FaUserAlt size={19} />
       </Link>
       <Link to="/teste">
         <FaSignInAlt size={24} />
