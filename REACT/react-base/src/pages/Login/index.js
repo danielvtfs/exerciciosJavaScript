@@ -1,11 +1,13 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+
 import { Container } from '../../styles/GlobalStyles';
 import { Title, Paragrafo } from './styled';
-import * as exampleActions from '../../store/modules/example/action';
+import * as exampleActions from '../../store/modules/example/actions';
 
 export default function Login() {
   const dispatch = useDispatch();
+
   function handleClick(e) {
     e.preventDefault();
 
@@ -16,9 +18,9 @@ export default function Login() {
     <Container>
       <Title>
         Login
-        <small>oie</small>
+        <small>Oie</small>
       </Title>
-      <Paragrafo>Lorem</Paragrafo>
+      <Paragrafo>Lorem ipsum dolor sit amet.</Paragrafo>
       <button type="button" onClick={handleClick}>
         Enviar
       </button>
